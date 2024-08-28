@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamSmart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('images/landingbg.jpg') no-repeat center center fixed; /* Background image */
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6); /* Overlay color */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+        }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #CD1818;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #F2613F;
+        }
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 0.0rem 0; /* Decreased the padding */
+            font-size: 0.0rem; /* Adjusted the font size */
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="main-content">
+        <div class="content">
+            <h1>StreamSmart</h1>
+            <p>Explore your desired Subsciptions for a smart price</p>
+            <a href="loginpage.php" class="btn">Explore</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 StreamSmart. All rights reserved.</p>
+    </footer>
+</body>
+</html>
