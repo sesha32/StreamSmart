@@ -1,5 +1,6 @@
 <?php
-include('auth_check.php'); ?>
+include('auth_check.php'); 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,10 +40,7 @@ include('auth_check.php'); ?>
             margin: 20px;
             text-align: center;
         }
-        h1 {
-            color: #e50914;
-        }
-        h3 {
+        h1, h3 {
             color: #e50914;
         }
         .button {
@@ -79,17 +77,31 @@ include('auth_check.php'); ?>
         .back-button:hover {
             background-color: #f40612;
         }
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            width: 90%; /* Adjust width as necessary */
+        }
     </style>
 </head>
 <body>
     <div class="overlay"></div>
     <a href="../admin_home.php" class="back-button">Back</a>
-    <div class="container">
-        <h1>Have to Issue</h1>
-        <h3>Select a Plan</h3>
-        <p>4 per team</p>
-        <a href="netflix_havetoissue_monthly.php" class="button">Monthly Plan</a>
-        <a href="netflix_havetoissue_yearly.php" class="button">Yearly Plan</a>
+    <div class="flex-container">
+        <div class="container">
+            <h1>Have to Issue</h1>
+            <h3>Select a Plan</h3>
+            <p>4 per team</p>
+            <a href="netflix_havetoissue_monthly.php" class="button">Monthly Plan</a>
+            <a href="netflix_havetoissue_yearly.php" class="button">Yearly Plan</a>
+        </div>
+
+        <div class="container">
+            <h1>Expiring Soon</h1>
+            <h3>Select a Plan</h3>
+            <a href="netflix_expiring_monthly.php" class="button">Monthly Plan</a>
+            <a href="netflix_expiring_yearly.php" class="button">Yearly Plan</a>
+        </div>
     </div>
 </body>
 </html>

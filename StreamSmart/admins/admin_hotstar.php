@@ -79,18 +79,33 @@
         .back-button:hover {
             background-color: #009ae0;
         }
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            width: 90%; /* Adjust width as necessary */
+        }
     </style>
 </head>
 <body>
     <div class="overlay"></div>
     <a href="../admin_home.php" class="back-button">Back</a>
-    <div class="container">
-        <h1>Have to Issue</h1>
-        <h3>Select a Plan</h3>
-        <p>2 per team</p>
-        <a href="hotstar_havetoissue_monthly.php" class="button">Monthly Plan</a>
-        <a href="hotstar_havetoissue_quarterly.php" class="button">Quarterly Plan</a>
-        <a href="hotstar_havetoissue_yearly.php" class="button">Yearly Plan</a>
+    <div class="flex-container">
+        <div class="container">
+            <h1>Have to Issue</h1>
+            <h3>Select a Plan</h3>
+            <p>2 per team</p>
+            <a href="hotstar_havetoissue_monthly.php" class="button">Monthly Plan</a>
+            <a href="hotstar_havetoissue_quarterly.php" class="button">Quarterly Plan</a>
+            <a href="hotstar_havetoissue_yearly.php" class="button">Yearly Plan</a>
+        </div>
+
+        <div class="container">
+            <h1>Expiring Soon</h1>
+            <h3>Select a Plan</h3>
+            <a href="hotstar_expiring_monthly.php" class="button">Monthly Plan</a>
+            <a href="hotstar_expiring_quarterly.php" class="button">Quarterly Plan</a>
+            <a href="hotstar_expiring_yearly.php" class="button">Yearly Plan</a>
+        </div>
     </div>
 </body>
 </html>

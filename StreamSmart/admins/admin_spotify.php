@@ -38,10 +38,7 @@
             margin: 20px;
             text-align: center;
         }
-        h1 {
-            color: #fff;
-        }
-        h3 {
+        h1, h3 {
             color: #fff;
         }
         .button {
@@ -78,17 +75,34 @@
         .back-button:hover {
             background-color: #1AA34A; /* Green hover effect */
         }
+        .flex-container {
+            display: flex; /* Flexbox for side-by-side layout */
+            justify-content: space-around; /* Space around containers */
+            width: 90%; /* Adjust width as necessary */
+        }
     </style>
 </head>
 <body>
     <div class="overlay"></div>
     <a href="../admin_home.php" class="back-button">Back</a>
-    <div class="container">
-        <h1>Have to issue</h1>
-        <h3>Select a Plan</h3>
-        <p>2 per team ||6 per team</p>
-        <a href="spotify_havetoissue_duo.php" class="button">Plan 1</a>
-        <a href="spotify_havetoissue_fam.php" class="button">Plan 2</a>
+    <div class="flex-container">
+        <!-- Have to Issue Container -->
+        <div class="container">
+            <h1>Have to Issue</h1>
+            <h3>Select a Plan</h3>
+            <p>2 per team</p>
+            <a href="spotify_havetoissue_duo.php" class="button">Duo Plan</a>
+            <a href="spotify_havetoissue_fam.php" class="button">Family Plan</a>
+        </div>
+
+        <!-- Expiring Soon Container -->
+        <div class="container">
+            <h1>Expiring Soon</h1>
+            <h3>Select a Plan</h3>
+            <p>2 per team</p>
+            <a href="spotify_expiring_duo.php" class="button">Duo Plan</a>
+            <a href="spotify_expiring_fam.php" class="button">Family Plan</a>
+        </div>
     </div>
 </body>
 </html>

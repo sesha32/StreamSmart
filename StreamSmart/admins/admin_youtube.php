@@ -30,19 +30,15 @@
             z-index: -1;
         }
         .container {
-            width: 45%; /* Adjusted width */
-            padding: 40px; /* Adjusted padding */
+            width: 45%; /* Same width as in Netflix example */
+            padding: 40px; /* Same padding */
             background-color: #202020;
-            color: #FFFFFF;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            margin: 20px;
+            margin: 20px; /* Margin for spacing */
             text-align: center;
         }
-        h1 {
-            color: #FF0000; /* YouTube red color */
-        }
-        h3 {
+        h1, h3 {
             color: #FF0000; /* YouTube red color */
         }
         .button {
@@ -79,16 +75,32 @@
         .back-button:hover {
             background-color: #cc0000;
         }
+        .flex-container {
+            display: flex; /* Flexbox for side-by-side layout */
+            justify-content: space-around; /* Space around containers */
+            width: 90%; /* Adjust width as necessary */
+        }
     </style>
 </head>
 <body>
     <div class="overlay"></div>
     <a href="../admin_home.php" class="back-button">Back</a>
-    <div class="container">
-        <h1>Have to Issue</h1>
-        <h3>Select a Plan</h3>
-        <p>5 per team</p>
-        <a href="youtube_havetoissue_monthly.php" class="button">Monthly Plan</a>
+    <div class="flex-container">
+        <!-- Main Subscription Container -->
+        <div class="container">
+            <h1>Have to Issue</h1>
+            <h3>Select a Plan</h3>
+            <p>5 per team</p>
+            <a href="youtube_havetoissue_monthly.php" class="button">Monthly Plan</a>
+        </div>
+
+        <!-- Expiring Soon Container -->
+        <div class="container">
+            <h1>Expiring Soon</h1>
+            <h3>Select a Plan</h3>
+            <p>5 per team</p>
+            <a href="youtube_expiring_monthly.php" class="button">Monthly Plan</a>
+        </div>
     </div>
 </body>
 </html>

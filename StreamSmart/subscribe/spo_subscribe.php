@@ -18,10 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->fetch();
     $stmt->close();
 
+    // Get the current date and time for subscription_date
+    $subscriptionDate = date('Y-m-d H:i:s');
+
     // Insert subscription details into the Spotify subscriptions database
-    $insertQuery = "INSERT INTO spotify_subscriptions (user_id, first_name, middle_name, last_name, email, mobile, plan) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $insertQuery = "INSERT INTO spotify_subscriptions (user_id, first_name, middle_name, last_name, email, mobile, plan, subscription_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $insertStmt = $conn->prepare($insertQuery);
-    $insertStmt->bind_param('issssss', $userId, $firstName, $middleName, $lastName, $email, $mobile, $plan);
+    $insertStmt->bind_param('isssssss', $userId, $firstName, $middleName, $lastName, $email, $mobile, $plan, $subscriptionDate);
 
     if ($insertStmt->execute()) {
         $subscriptionSuccessful = true;
@@ -88,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php if ($subscriptionSuccessful): ?>
             <h1>Subscription Successful!</h1>
             <p>Thank you for subscribing to Spotify. Your subscription details have been successfully recorded.</p>
-            <p>This premium plan may require a team setup to comeplete the plan, and we will notify you once everything is set. Please wait patiently. We will contact you via the mobile number you provided.</p>
+            <p>This premium plan may require a team setup to complete the plan, and we will notify you once everything is set. Please wait patiently. We will contact you via the mobile number you provided.</p>
             <p>You can enjoy all the benefits of your Spotify subscription!</p>
         <?php else: ?>
             <h1>Subscription Failed</h1>

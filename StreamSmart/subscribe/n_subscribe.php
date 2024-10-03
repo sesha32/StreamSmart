@@ -18,10 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->fetch();
     $stmt->close();
 
+    // Get the current date and time for subscription_date
+    $subscriptionDate = date('Y-m-d H:i:s');
+
     // Insert subscription details into the Netflix subscriptions database
-    $insertQuery = "INSERT INTO netflix_subscriptions (user_id, first_name, middle_name, last_name, email, mobile, plan) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $insertQuery = "INSERT INTO netflix_subscriptions (user_id, first_name, middle_name, last_name, email, mobile, plan, subscription_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $insertStmt = $conn->prepare($insertQuery);
-    $insertStmt->bind_param('issssss', $userId, $firstName, $middleName, $lastName, $email, $mobile, $plan);
+    $insertStmt->bind_param('isssssss', $userId, $firstName, $middleName, $lastName, $email, $mobile, $plan, $subscriptionDate);
 
     if ($insertStmt->execute()) {
         $subscriptionSuccessful = true;
