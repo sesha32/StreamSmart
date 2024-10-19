@@ -15,9 +15,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch the user's details from the database
+// Fetch the user's details from the database, including number of subscriptions
 $user_id = $_SESSION['user_id'];
-$sql = "SELECT first_name, middle_name, last_name, email, dob, gender FROM users WHERE id = '$user_id'";
+$sql = "SELECT first_name, middle_name, last_name, email, dob, gender, subscriptions FROM users WHERE id = '$user_id'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -128,6 +128,10 @@ $conn->close();
         <div>
             <label for="gender">Gender:</label>
             <span id="gender"><?php echo htmlspecialchars($user['gender']); ?></span>
+        </div>
+        <div>
+            <label for="subscriptions">No. of Subscriptions Purchased:</label>
+            <span id="subscriptions"><?php echo htmlspecialchars($user['subscriptions']); ?></span>
         </div>
         <form action="logout.php" method="post">
             <button type="submit" class="logout-button">Logout</button>
