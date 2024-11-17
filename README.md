@@ -114,7 +114,7 @@ The platform also empowers administrators to issue and manage subscriptions, org
 ## **Future Enhancements**
 
 - **Support for More OTT Platforms**:
-  - Expand the platform to manage subscriptions for services like Lionsgate, Zee5, SonyLiv, etc.
+  - Expand the platform to manage subscriptions for services like LionsGate Play, Zee5, SonyLiv, etc.
 - **Automated Notifications**:
   - Notify users via email or SMS about expiring subscriptions.
 - **Mobile App Integration**:
