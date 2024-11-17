@@ -114,9 +114,7 @@ The platform also empowers administrators to issue and manage subscriptions, org
 ## **Future Enhancements**
 
 - **Support for More OTT Platforms**:
-  - Expand the platform to manage subscriptions for services like Netflix, Amazon Prime, Disney+, etc.
-- **Direct Renewal Options**:
-  - Allow users to renew expiring subscriptions directly from the platform.
+  - Expand the platform to manage subscriptions for services like Lionsgate, Zee5, SonyLiv, etc.
 - **Automated Notifications**:
   - Notify users via email or SMS about expiring subscriptions.
 - **Mobile App Integration**:
